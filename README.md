@@ -9,6 +9,7 @@ Proyecto Next.js optimizado para SEO local, GEO/AEO/LLMO y captación por llamad
 - SEO técnico con sitemap y robots dinámicos
 - Schema JSON-LD: LocalBusiness, Service, FAQPage, BreadcrumbList, WebSite
 - Landings SEO por servicio y localidad
+- Imágenes SVG optimizadas en `public/images`
 
 ## Scripts
 
@@ -39,3 +40,7 @@ Importar este repositorio en Vercel como proyecto Next.js:
 - Install command: `npm install`
 
 No conectar `chatarrero24h.com` hasta validar la preview.
+
+## Último disparador de despliegue
+
+Deploy trigger: 2026-08-20 21:31 Europe/Madrid.
