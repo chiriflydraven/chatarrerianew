@@ -10,9 +10,14 @@ export const blogPosts = [
     updated: '2026-08-20',
     keywords: ['guantes para chatarra', 'guantes anticorte', 'manipular metales', 'seguridad chatarra'],
     products: [
-      { label: 'Guantes anticorte', query: 'guantes anticorte trabajo' },
-      { label: 'Guantes de cuero', query: 'guantes cuero trabajo metal' },
-      { label: 'Guantes nitrilo reforzado', query: 'guantes nitrilo trabajo reforzado' }
+      { label: 'Guantes anticorte nivel 5', query: 'guantes anticorte nivel 5 trabajo' },
+      { label: 'Guantes de cuero reforzado', query: 'guantes cuero reforzado trabajo metal' },
+      { label: 'Guantes nitrilo reforzado', query: 'guantes nitrilo trabajo reforzado' },
+      { label: 'Guantes para soldadura', query: 'guantes soldadura cuero largos' },
+      { label: 'Guantes mecánico profesional', query: 'guantes mecanico profesional trabajo' },
+      { label: 'Gafas de seguridad', query: 'gafas seguridad trabajo proteccion' },
+      { label: 'Mascarilla antipolvo trabajo', query: 'mascarilla antipolvo trabajo' },
+      { label: 'Rodilleras de trabajo', query: 'rodilleras trabajo profesional' }
     ]
   },
   {
@@ -24,9 +29,14 @@ export const blogPosts = [
     updated: '2026-08-20',
     keywords: ['preparar piso para vaciado', 'vaciado de pisos', 'retirada de muebles'],
     products: [
-      { label: 'Cajas resistentes', query: 'cajas mudanza resistentes' },
-      { label: 'Bolsas de escombros', query: 'bolsas escombros resistentes' },
-      { label: 'Cinchas de transporte', query: 'cinchas transporte mudanza' }
+      { label: 'Cajas de mudanza resistentes', query: 'cajas mudanza resistentes' },
+      { label: 'Bolsas de escombros resistentes', query: 'bolsas escombros resistentes' },
+      { label: 'Cinchas de transporte', query: 'cinchas transporte mudanza' },
+      { label: 'Carretilla plegable', query: 'carretilla plegable carga mudanza' },
+      { label: 'Film transparente embalaje', query: 'film embalaje mudanza' },
+      { label: 'Cinta americana resistente', query: 'cinta americana resistente' },
+      { label: 'Manta de mudanza', query: 'manta mudanza proteccion muebles' },
+      { label: 'Rotuladores permanentes', query: 'rotuladores permanentes cajas mudanza' }
     ]
   }
 ]
