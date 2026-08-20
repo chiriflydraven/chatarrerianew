@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
 import { materials, services, site, zones } from '@/data/site'
@@ -10,10 +9,12 @@ const faqs = [
   { question: '¿Hacéis vaciado de pisos completos?', answer: 'Sí. Se pueden retirar muebles, electrodomésticos, enseres, chatarra y objetos voluminosos.' }
 ]
 
+const heroPhoto = 'https://source.unsplash.com/1800x1100/?scrap-metal,recycling,truck,industrial'
+
 const visuals = [
-  { src: '/images/vaciado-pisos-madrid.svg', title: 'Vaciado de pisos y trasteros', text: 'Retirada de muebles, enseres, cajas y objetos voluminosos.' },
-  { src: '/images/compra-metales-madrid.svg', title: 'Compra de metales', text: 'Cobre, aluminio, hierro, baterías, cable y materiales aprovechables.' },
-  { src: '/images/electrodomesticos-madrid.svg', title: 'Retirada de electrodomésticos', text: 'Lavadoras, neveras, hornos y electrodomésticos voluminosos.' }
+  { src: 'https://source.unsplash.com/1200x850/?apartment,clearance,moving,boxes', title: 'Vaciado de pisos y trasteros', text: 'Retirada de muebles, enseres, cajas y objetos voluminosos.' },
+  { src: 'https://source.unsplash.com/1200x850/?scrap-metal,copper,aluminum,recycling', title: 'Compra de metales', text: 'Cobre, aluminio, hierro, baterías, cable y materiales aprovechables.' },
+  { src: 'https://source.unsplash.com/1200x850/?washing-machine,appliance,removal,truck', title: 'Retirada de electrodomésticos', text: 'Lavadoras, neveras, hornos y electrodomésticos voluminosos.' }
 ]
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
     <main>
       <JsonLd data={faqSchema(faqs)} />
       <section className="hero hero-with-image">
-        <Image src="/images/hero-madrid-chatarra.svg" alt="Chatarrero 24h en Madrid con camión de recogida de chatarra y skyline" fill priority className="hero-image" />
+        <img src={heroPhoto} alt="Servicio de recogida de chatarra y metales en Madrid con camión industrial" className="hero-photo" loading="eager" />
         <div className="hero-shade" />
         <div className="container grid-hero hero-content">
           <div>
@@ -44,7 +45,7 @@ export default function Home() {
 
       <section><div className="container"><div className="section-head"><h2>Servicios principales</h2><p className="muted">Arquitectura preparada para SEO local, Google Ads y respuestas de IA.</p></div><div className="cards">{services.slice(0, 11).map((service) => <article className="card" key={service.slug}><p className="eyebrow">{service.intent}</p><h3>{service.shortTitle}</h3><p className="muted">{service.description}</p><ul>{service.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><Link className="btn btn-ghost" href={`/${service.slug}`}>Ver servicio →</Link></article>)}</div></div></section>
 
-      <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2><p className="muted">Bloques visuales optimizados para confianza, conversión y comprensión semántica.</p></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card" key={item.src}><Image src={item.src} alt={item.title} width={1200} height={800} /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
+      <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2><p className="muted">Fotos realistas para reforzar confianza, conversión y comprensión semántica.</p></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
 
       <section><div className="container"><div className="section-head"><h2>Metales y materiales</h2><Link className="btn btn-ghost" href="/precios-chatarra">Ver precios orientativos</Link></div><div className="cards">{materials.map((material) => <article className="card" key={material.slug}><h3>{material.name}</h3><p className="muted">{material.description}</p><Link className="btn btn-ghost" href={`/compra-metales/${material.slug}`}>Más información →</Link></article>)}</div></div></section>
 
