@@ -41,7 +41,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGTRQBGB" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} /></noscript>
         <Analytics />
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
