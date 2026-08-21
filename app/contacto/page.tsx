@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ContactForm } from '@/components/ContactForm'
+import { GoogleBusiness } from '@/components/GoogleBusiness'
 import { TrackedLink } from '@/components/TrackedLink'
 import { JsonLd } from '@/components/JsonLd'
 import { site } from '@/data/site'
@@ -16,7 +17,7 @@ export default function Page() {
     '@type': 'ContactPage',
     name: 'Contacto Chatarrero24h',
     url: `${site.url}/contacto`,
-    mainEntity: { '@type': 'LocalBusiness', name: site.name, telephone: site.phoneDisplay, url: site.url }
+    mainEntity: { '@type': 'LocalBusiness', name: site.name, telephone: site.phoneDisplay, url: site.url, address: site.address }
   }
   return (
     <main>
@@ -44,6 +45,7 @@ export default function Page() {
           </aside>
         </div>
       </section>
+      <GoogleBusiness />
     </main>
   )
 }
