@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Analytics } from '@/components/Analytics'
+import { CookieBanner } from '@/components/CookieBanner'
 import { FloatingCta } from '@/components/FloatingCta'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <FloatingCta />
+        <CookieBanner />
       </body>
     </html>
   )
