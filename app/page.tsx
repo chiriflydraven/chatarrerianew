@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { GoogleBusiness } from '@/components/GoogleBusiness'
 import { JsonLd } from '@/components/JsonLd'
 import { blogPosts } from '@/data/blog'
 import { materials, services, site, zones } from '@/data/site'
@@ -42,6 +43,8 @@ export default function Home() {
       </section>
 
       <section><div className="container"><div className="section-head"><h2>Servicios principales</h2></div><div className="cards">{services.slice(0, 11).map((service) => <article className="card" key={service.slug}><p className="eyebrow">{service.intent}</p><h3>{service.shortTitle}</h3><p className="muted">{service.description}</p><ul>{service.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><Link className="btn btn-ghost" href={`/${service.slug}`}>Ver servicio →</Link></article>)}</div></div></section>
+
+      <GoogleBusiness />
 
       <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" referrerPolicy="no-referrer" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
 
