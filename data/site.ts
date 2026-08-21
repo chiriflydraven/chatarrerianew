@@ -29,7 +29,13 @@ export const zones = [
   { slug: 'getafe', name: 'Getafe', priority: 'Comunidad de Madrid' },
   { slug: 'leganes', name: 'Leganés', priority: 'Comunidad de Madrid' },
   { slug: 'alcorcon', name: 'Alcorcón', priority: 'Comunidad de Madrid' },
-  { slug: 'mostoles', name: 'Móstoles', priority: 'Comunidad de Madrid' }
+  { slug: 'mostoles', name: 'Móstoles', priority: 'Comunidad de Madrid' },
+  { slug: 'parla', name: 'Parla', priority: 'Comunidad de Madrid' },
+  { slug: 'fuenlabrada', name: 'Fuenlabrada', priority: 'Comunidad de Madrid' },
+  { slug: 'arganda-del-rey', name: 'Arganda del Rey', priority: 'Madrid Este' },
+  { slug: 'vallecas', name: 'Vallecas', priority: 'Madrid sureste' },
+  { slug: 'barajas', name: 'Barajas', priority: 'Madrid Este' },
+  { slug: 'san-blas-canillejas', name: 'San Blas-Canillejas', priority: 'Madrid Este' }
 ]
 
 export const services = [
@@ -74,6 +80,54 @@ export const services = [
     bullets: ['Hierro y acero', 'Maquinaria y estructuras', 'Servicio para naves, talleres y almacenes']
   },
   {
+    slug: 'compra-cable-cobre-madrid',
+    title: 'Compra de cable de cobre en Madrid',
+    shortTitle: 'Cable de cobre',
+    description: 'Compra de cable de cobre, cable eléctrico, cable con PVC y restos de instalaciones según cantidad, pureza y cotización.',
+    intent: 'compra cable cobre Madrid',
+    bullets: ['Cable limpio o con cubierta', 'Electricistas, reformas y almacenes', 'Valoración rápida por fotos']
+  },
+  {
+    slug: 'compra-acero-inoxidable-madrid',
+    title: 'Compra de acero inoxidable en Madrid',
+    shortTitle: 'Acero inoxidable',
+    description: 'Compra y retirada de acero inoxidable, piezas metálicas, maquinaria, fregaderos, estructuras y material industrial.',
+    intent: 'compra acero inoxidable Madrid',
+    bullets: ['Inox de reformas e industria', 'Material limpio o mixto', 'Recogida bajo consulta']
+  },
+  {
+    slug: 'compra-laton-madrid',
+    title: 'Compra de latón en Madrid',
+    shortTitle: 'Compra de latón',
+    description: 'Compra de latón, grifería, válvulas, piezas de fontanería y recortes metálicos según calidad y volumen.',
+    intent: 'compra latón Madrid',
+    bullets: ['Grifería y válvulas', 'Recortes y piezas', 'Precio según calidad']
+  },
+  {
+    slug: 'compra-bronce-madrid',
+    title: 'Compra de bronce en Madrid',
+    shortTitle: 'Compra de bronce',
+    description: 'Compra de bronce y aleaciones no férricas procedentes de piezas, maquinaria, talleres o material antiguo.',
+    intent: 'compra bronce Madrid',
+    bullets: ['Piezas y aleaciones', 'Talleres y particulares', 'Valoración por fotos']
+  },
+  {
+    slug: 'compra-baterias-madrid',
+    title: 'Compra de baterías usadas en Madrid',
+    shortTitle: 'Baterías usadas',
+    description: 'Recogida y valoración de baterías usadas de coche, baterías industriales y materiales con plomo bajo consulta.',
+    intent: 'compra baterías usadas Madrid',
+    bullets: ['Baterías de coche', 'Plomo y material relacionado', 'Consulta previa por WhatsApp']
+  },
+  {
+    slug: 'retirada-raee-madrid',
+    title: 'Retirada de RAEE y aparatos eléctricos en Madrid',
+    shortTitle: 'Retirada RAEE',
+    description: 'Retirada de aparatos eléctricos y electrónicos, electrodomésticos y equipos obsoletos en domicilios, locales y empresas.',
+    intent: 'retirada RAEE Madrid',
+    bullets: ['Aparatos eléctricos', 'Empresas y particulares', 'Combinable con vaciados']
+  },
+  {
     slug: 'vaciado-pisos-madrid',
     title: 'Vaciado de pisos en Madrid',
     shortTitle: 'Vaciado de pisos',
@@ -98,12 +152,28 @@ export const services = [
     bullets: ['Grandes volúmenes', 'Empresas, talleres y almacenes', 'Coordinación previa por fotos o visita']
   },
   {
+    slug: 'vaciado-locales-madrid',
+    title: 'Vaciado de locales en Madrid',
+    shortTitle: 'Vaciado de locales',
+    description: 'Vaciado de locales comerciales, oficinas, almacenes y negocios con retirada de mobiliario, estanterías, metal y enseres.',
+    intent: 'vaciado locales Madrid',
+    bullets: ['Locales y oficinas', 'Retirada de mobiliario', 'Presupuesto por fotos']
+  },
+  {
     slug: 'retirada-electrodomesticos-madrid',
     title: 'Retirada de electrodomésticos en Madrid',
     shortTitle: 'Retirada de electrodomésticos',
     description: 'Retirada de lavadoras, neveras, hornos, lavavajillas, termos, calderas y pequeños electrodomésticos en domicilios y negocios.',
     intent: 'retirada de electrodomésticos Madrid',
     bullets: ['Lavadoras, neveras y hornos', 'Domicilios, locales y empresas', 'Servicio combinado con vaciados']
+  },
+  {
+    slug: 'retirada-muebles-madrid',
+    title: 'Retirada de muebles en Madrid',
+    shortTitle: 'Retirada de muebles',
+    description: 'Retirada de muebles, sofás, colchones, armarios, mesas y objetos voluminosos en viviendas, trasteros y locales.',
+    intent: 'retirada muebles Madrid',
+    bullets: ['Muebles voluminosos', 'Pisos y trasteros', 'Combinable con vaciado']
   },
   {
     slug: 'mudanzas-madrid',
@@ -143,21 +213,11 @@ export const materials = [
   { slug: 'cobre', name: 'Cobre', description: 'Cables, tuberías, bobinas, radiadores y cobre limpio o con PVC.' },
   { slug: 'aluminio', name: 'Aluminio', description: 'Perfiles, chapas, ventanas, radiadores y aluminio mixto.' },
   { slug: 'hierro', name: 'Hierro', description: 'Hierro, acero, estructuras, maquinaria, estanterías y chatarra pesada.' },
+  { slug: 'cable-cobre', name: 'Cable de cobre', description: 'Cable eléctrico, cable pelado, cable con PVC y restos de instalaciones.' },
+  { slug: 'acero-inoxidable', name: 'Acero inoxidable', description: 'Piezas, maquinaria, fregaderos, estructuras y material industrial inoxidable.' },
+  { slug: 'laton', name: 'Latón', description: 'Grifería, válvulas, piezas de fontanería y recortes de latón.' },
+  { slug: 'bronce', name: 'Bronce', description: 'Piezas de bronce, aleaciones y material procedente de talleres o maquinaria.' },
   { slug: 'baterias', name: 'Baterías y plomo', description: 'Baterías de coche, plomo industrial y otros materiales con plomo bajo consulta.' },
-  { slug: 'electrodomesticos', name: 'Electrodomésticos', description: 'Lavadoras, neveras, hornos, lavavajillas y pequeños electrodomésticos.' }
-]
-
-export const blogPosts = [
-  {
-    slug: 'mejores-guantes-para-manipular-chatarra',
-    title: 'Mejores guantes para manipular chatarra y metales',
-    description: 'Guía práctica para elegir guantes resistentes para manipular chatarra, metales, cajas, herramientas y objetos voluminosos.',
-    affiliate: true
-  },
-  {
-    slug: 'como-preparar-un-piso-antes-de-un-vaciado',
-    title: 'Cómo preparar un piso antes de un vaciado',
-    description: 'Pasos prácticos para organizar un vaciado de piso, separar objetos, fotografiar materiales y pedir presupuesto rápido.',
-    affiliate: false
-  }
+  { slug: 'electrodomesticos', name: 'Electrodomésticos', description: 'Lavadoras, neveras, hornos, lavavajillas y pequeños electrodomésticos.' },
+  { slug: 'raee', name: 'RAEE', description: 'Aparatos eléctricos y electrónicos obsoletos bajo consulta.' }
 ]
