@@ -11,8 +11,11 @@ export function localBusinessSchema() {
     telephone: site.phoneDisplay,
     email: site.email,
     description: site.description,
+    image: `${site.url}/images/vaciado-pisos.svg`,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Av. de la Cañada',
+      postalCode: '28823',
       addressLocality: 'San Fernando de Henares',
       addressRegion: 'Madrid',
       addressCountry: 'ES'
@@ -24,6 +27,11 @@ export function localBusinessSchema() {
       opens: '00:00',
       closes: '23:59'
     }],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '3.8',
+      reviewCount: '10'
+    },
     priceRange: '€€'
   }
 }
@@ -53,7 +61,8 @@ export function serviceSchema(name: string, description: string, areaServed = 'C
       '@type': 'LocalBusiness',
       name: site.name,
       telephone: site.phoneDisplay,
-      url: site.url
+      url: site.url,
+      address: site.address
     }
   }
 }
