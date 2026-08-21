@@ -11,9 +11,9 @@ const faqs = [
 ]
 
 const visuals = [
-  { src: '/images/vaciado-pisos.svg', title: 'Vaciado de pisos y trasteros', text: 'Retirada de muebles, enseres, cajas y objetos voluminosos.' },
-  { src: '/images/compra-metales.svg', title: 'Compra de metales', text: 'Cobre, aluminio, hierro, baterías, cable y materiales aprovechables.' },
-  { src: '/images/retirada-electrodomesticos.svg', title: 'Retirada de electrodomésticos', text: 'Lavadoras, neveras, hornos y electrodomésticos voluminosos.' }
+  { src: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1200&q=80', title: 'Vaciado de pisos y trasteros', text: 'Retirada de muebles, enseres, cajas y objetos voluminosos.' },
+  { src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80', title: 'Compra de metales', text: 'Cobre, aluminio, hierro, baterías, cable y materiales aprovechables.' },
+  { src: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80', title: 'Retirada de electrodomésticos', text: 'Lavadoras, neveras, hornos y electrodomésticos voluminosos.' }
 ]
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
 
       <section><div className="container"><div className="section-head"><h2>Servicios principales</h2></div><div className="cards">{services.slice(0, 11).map((service) => <article className="card" key={service.slug}><p className="eyebrow">{service.intent}</p><h3>{service.shortTitle}</h3><p className="muted">{service.description}</p><ul>{service.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><Link className="btn btn-ghost" href={`/${service.slug}`}>Ver servicio →</Link></article>)}</div></div></section>
 
-      <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
+      <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" referrerPolicy="no-referrer" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
 
       <section><div className="container"><div className="section-head"><h2>Guías y recomendaciones</h2><Link className="btn btn-ghost" href="/blog">Ver blog</Link></div><div className="cards">{blogPosts.map((post) => <article className="card" key={post.slug}><p className="eyebrow">{post.category}</p><h3>{post.title}</h3><p className="muted">{post.description}</p><Link className="btn btn-ghost" href={`/blog/${post.slug}`}>Leer guía →</Link></article>)}<article className="card"><p className="eyebrow">Amazon afiliados</p><h3>Guantes y seguridad para manipular chatarra</h3><p className="muted">Guantes, gafas, mascarillas y accesorios útiles para trabajos de retirada, mudanza y manipulación de metales.</p><Link className="btn btn-primary" href="/guantes-chatarra">Ver recomendaciones</Link></article></div></div></section>
 
