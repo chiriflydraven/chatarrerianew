@@ -15,6 +15,8 @@ export function Header() {
           <Link href="/vaciado-pisos-madrid">Vaciados</Link>
           <Link href="/mudanzas-madrid">Mudanzas</Link>
           <Link href="/precios-chatarra">Precios</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/guantes-chatarra">Amazon</Link>
           <Link href="/contacto">Contacto</Link>
         </nav>
         <div className="cta-row header-cta">
