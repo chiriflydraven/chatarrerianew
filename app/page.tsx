@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { JsonLd } from '@/components/JsonLd'
+import { blogPosts } from '@/data/blog'
 import { materials, services, site, zones } from '@/data/site'
 import { faqSchema } from '@/lib/seo'
 
@@ -43,6 +44,8 @@ export default function Home() {
       <section><div className="container"><div className="section-head"><h2>Servicios principales</h2></div><div className="cards">{services.slice(0, 11).map((service) => <article className="card" key={service.slug}><p className="eyebrow">{service.intent}</p><h3>{service.shortTitle}</h3><p className="muted">{service.description}</p><ul>{service.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><Link className="btn btn-ghost" href={`/${service.slug}`}>Ver servicio →</Link></article>)}</div></div></section>
 
       <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
+
+      <section><div className="container"><div className="section-head"><h2>Guías y recomendaciones</h2><Link className="btn btn-ghost" href="/blog">Ver blog</Link></div><div className="cards">{blogPosts.map((post) => <article className="card" key={post.slug}><p className="eyebrow">{post.category}</p><h3>{post.title}</h3><p className="muted">{post.description}</p><Link className="btn btn-ghost" href={`/blog/${post.slug}`}>Leer guía →</Link></article>)}<article className="card"><p className="eyebrow">Amazon afiliados</p><h3>Guantes y seguridad para manipular chatarra</h3><p className="muted">Guantes, gafas, mascarillas y accesorios útiles para trabajos de retirada, mudanza y manipulación de metales.</p><Link className="btn btn-primary" href="/guantes-chatarra">Ver recomendaciones</Link></article></div></div></section>
 
       <section><div className="container"><div className="section-head"><h2>Metales y materiales</h2><Link className="btn btn-ghost" href="/precios-chatarra">Ver precios orientativos</Link></div><div className="cards">{materials.map((material) => <article className="card" key={material.slug}><h3>{material.name}</h3><p className="muted">{material.description}</p><Link className="btn btn-ghost" href={`/compra-metales/${material.slug}`}>Más información →</Link></article>)}</div></div></section>
 
