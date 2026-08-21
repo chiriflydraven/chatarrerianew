@@ -1,8 +1,27 @@
+'use client'
+
 import Script from 'next/script'
+import { useEffect, useState } from 'react'
+
+const STORAGE_KEY = 'chatarrero24h_cookie_consent'
 
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-8Q7EB7LG0Y'
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-NGTRQBGB'
+  const [enabled, setEnabled] = useState(false)
+
+  useEffect(() => {
+    const checkConsent = () => setEnabled(localStorage.getItem(STORAGE_KEY) === 'accepted')
+    checkConsent()
+    window.addEventListener('chatarrero24h:cookie-consent', checkConsent)
+    window.addEventListener('storage', checkConsent)
+    return () => {
+      window.removeEventListener('chatarrero24h:cookie-consent', checkConsent)
+      window.removeEventListener('storage', checkConsent)
+    }
+  }, [])
+
+  if (!enabled) return null
 
   return (
     <>
