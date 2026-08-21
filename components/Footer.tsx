@@ -23,6 +23,10 @@ export function Footer() {
           ))}
         </div>
         <div>
+          <h3>Recursos</h3>
+          <p><Link href="/blog">Blog</Link></p>
+          <p><Link href="/guantes-chatarra">Guantes y seguridad</Link></p>
+          <p><Link href="/blog/como-preparar-un-piso-para-un-vaciado">Preparar un vaciado</Link></p>
           <h3>Legal</h3>
           <p><Link href="/aviso-legal">Aviso legal</Link></p>
           <p><Link href="/politica-privacidad">Privacidad</Link></p>
