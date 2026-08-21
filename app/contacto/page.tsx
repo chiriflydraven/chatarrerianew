@@ -21,7 +21,29 @@ export default function Page() {
   return (
     <main>
       <JsonLd data={schema} />
-      <section className="hero"><div className="container grid-hero"><div><p className="eyebrow">Contacto 24h</p><h1>Presupuesto rápido por WhatsApp.</h1><p className="lead">Indica servicio, localidad, volumen aproximado y detalles de acceso. Si puedes, después envía fotos por WhatsApp para una valoración más rápida.</p><div className="cta-row"><TrackedLink className="btn btn-primary" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" eventName="click_whatsapp" eventParams={{ location: 'contacto_hero' }}>Abrir WhatsApp</TrackedLink><TrackedLink className="btn btn-ghost" href={`tel:${site.phoneHref}`} eventName="click_call" eventParams={{ location: 'contacto_hero' }}>Llamar {site.phoneDisplay}</TrackedLink></div></div><div className="card"><h2>Solicitar presupuesto</h2><p className="muted">El formulario abre WhatsApp con el mensaje preparado.</p><ContactForm /></div></div></section>
+      <section className="contact-section">
+        <div className="container contact-layout">
+          <div className="article">
+            <p className="eyebrow">Contacto 24h</p>
+            <h1>Contacto Chatarrero 24h Madrid</h1>
+            <p className="lead">Pide presupuesto por WhatsApp para recogida de chatarra, compra de metales, vaciado de pisos, trasteros, naves, electrodomésticos, portes o mudanzas.</p>
+            <ul className="contact-list">
+              <li>Respuesta rápida por llamada o WhatsApp.</li>
+              <li>Servicio en San Fernando de Henares, Coslada y Madrid Este.</li>
+              <li>Valoración según fotos, material, volumen, acceso y localidad.</li>
+            </ul>
+            <div className="cta-row">
+              <TrackedLink className="btn btn-primary" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" eventName="click_whatsapp" eventParams={{ location: 'contacto_hero' }}>Abrir WhatsApp</TrackedLink>
+              <TrackedLink className="btn btn-ghost" href={`tel:${site.phoneHref}`} eventName="click_call" eventParams={{ location: 'contacto_hero' }}>Llamar {site.phoneDisplay}</TrackedLink>
+            </div>
+          </div>
+          <aside className="card contact-panel">
+            <h2>Solicitar presupuesto</h2>
+            <p className="muted">Rellena los datos mínimos y se abrirá WhatsApp con el mensaje preparado.</p>
+            <ContactForm />
+          </aside>
+        </div>
+      </section>
     </main>
   )
 }
