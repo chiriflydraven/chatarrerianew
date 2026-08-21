@@ -17,6 +17,13 @@ const visuals = [
   { src: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80', title: 'Retirada de electrodomésticos', text: 'Lavadoras, neveras, hornos y electrodomésticos voluminosos.' }
 ]
 
+const gallery = [
+  { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', title: 'Vaciado de viviendas', text: 'Pisos, herencias, alquileres y viviendas con muebles o enseres.' },
+  { src: 'https://images.unsplash.com/photo-1600518464441-9306b00c4b8c?auto=format&fit=crop&w=1200&q=80', title: 'Portes y mudanzas', text: 'Traslado de muebles, cajas y objetos voluminosos.' },
+  { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80', title: 'Material metálico', text: 'Clasificación de metales, hierro, aluminio y cobre.' },
+  { src: 'https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=1200&q=80', title: 'Naves y almacenes', text: 'Retirada de material acumulado, maquinaria y chatarra.' }
+]
+
 export default function Home() {
   return (
     <main>
@@ -47,6 +54,8 @@ export default function Home() {
       <GoogleBusiness />
 
       <section><div className="container"><div className="section-head"><h2>Trabajos que destacamos</h2></div><div className="visual-grid">{visuals.map((item) => <article className="visual-card photo" key={item.src}><img src={item.src} alt={item.title} loading="lazy" referrerPolicy="no-referrer" /><div className="visual-copy"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
+
+      <section><div className="container"><div className="section-head"><h2>Imágenes de servicios</h2><p className="muted">Apoyo visual para explicar mejor el tipo de trabajo y generar confianza antes del contacto.</p></div><div className="gallery-grid">{gallery.map((item) => <article className="gallery-card" key={item.src}><img src={item.src} alt={item.title} loading="lazy" referrerPolicy="no-referrer" /><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
 
       <section><div className="container"><div className="section-head"><h2>Guías y recomendaciones</h2><Link className="btn btn-ghost" href="/blog">Ver blog</Link></div><div className="cards">{blogPosts.map((post) => <article className="card" key={post.slug}><p className="eyebrow">{post.category}</p><h3>{post.title}</h3><p className="muted">{post.description}</p><Link className="btn btn-ghost" href={`/blog/${post.slug}`}>Leer guía →</Link></article>)}<article className="card"><p className="eyebrow">Amazon afiliados</p><h3>Guantes y seguridad para manipular chatarra</h3><p className="muted">Guantes, gafas, mascarillas y accesorios útiles para trabajos de retirada, mudanza y manipulación de metales.</p><Link className="btn btn-primary" href="/guantes-chatarra">Ver recomendaciones</Link></article></div></div></section>
 
